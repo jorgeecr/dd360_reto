@@ -1,0 +1,8 @@
+langchain
+langchain-experimental
+openai==0.28.0
+fastapi
+python-dotenv
+uvicorn
+huggingface_hub
+python-multipart
