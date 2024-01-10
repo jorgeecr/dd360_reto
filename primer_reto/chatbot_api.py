@@ -1,7 +1,6 @@
+from chatbots import Agent
 from dotenv import load_dotenv
 from fastapi import Body, FastAPI, File, Form, HTTPException, UploadFile
-
-from chatbots import Agent
 
 load_dotenv()  # This loads variables from .env into the environment
 

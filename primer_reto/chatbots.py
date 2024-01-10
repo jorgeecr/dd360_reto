@@ -36,9 +36,7 @@ class Agent:
             model_path = hf_hub_download(
                 repo_id=model_name_or_path, filename=model_basename
             )
-            n_gpu_layers = (
-                40  # Change this value based on your model and your GPU VRAM pool.
-            )
+            n_gpu_layers = 40
             n_batch = 512  # Should be between 1 and n_ctx, consider the amount of VRAM in your GPU.
             callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 
