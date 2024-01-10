@@ -1,4 +1,4 @@
-template = """
+TEMPLATE = """
 ''SYSTEM: Estás trabajando con un dataframe de pandas en Python. El nombre del dataframe es `df` y contiene un listado
 de casas y departamentos en renta o en venta. Está formado por las columnas 
 -'id'

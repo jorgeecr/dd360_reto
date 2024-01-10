@@ -10,6 +10,7 @@ from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 from langchain.chat_models import ChatOpenAI
 from langchain.llms import LlamaCpp
 from langchain_experimental.agents import create_csv_agent
+from prompts import TEMPLATE
 
 
 class Agent:
@@ -59,8 +60,7 @@ class Agent:
             return answer
         else:
             df = pd.read_csv(self.csv_path)
-            template = "TEMPLATE"
-            prompt = PromptTemplate(template=template, input_variables=["question"])
+            prompt = PromptTemplate(template=TEMPLATE, input_variables=["question"])
             llm_chain = LLMChain(prompt=prompt, llm=self.agent)
 
             resp = llm_chain.run(question)
